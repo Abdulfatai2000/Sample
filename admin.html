@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | COLDWANDE CBT TEST</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="admin-body">
+
+    <!-- Login Overlay -->
+    <div id="login-overlay" class="login-overlay">
+        <div class="login-box">
+            <h2><i class="fas fa-lock"></i> Admin Access</h2>
+            <p>Enter password to continue (default: admin)</p>
+            <input type="password" id="admin-pass" class="login-input" placeholder="Password">
+            <button onclick="adminManager.login()" class="btn btn-primary" style="width:100%">Login</button>
+            <p id="login-error" style="color:red; margin-top:10px; display:none">Invalid Password</p>
+        </div>
+    </div>
+
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="brand brand-font">
+                <i class="fas fa-university"></i> COLDWANDE
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active" onclick="adminManager.showTab('overview')"><i
+                            class="fas fa-chart-pie"></i> Overview</a></li>
+                <li><a href="#" onclick="adminManager.showTab('users')"><i class="fas fa-users"></i> Student
+                        Leaderboard</a></li>
+                <li><a href="#" onclick="adminManager.showTab('questions')"><i class="fas fa-book"></i> Question
+                        Bank</a></li>
+                <li><a href="#" onclick="adminManager.showTab('feedback')"><i class="fas fa-comment-alt"></i>
+                        Feedback</a></li>
+                <li style="margin-top:auto"><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <h2>Dashboard Overview</h2>
+                <div class="user-profile">
+                    <span>Welcome, Admin</span>
+                    <i class="fas fa-user-circle fa-2x" style="vertical-align:middle; margin-left:10px"></i>
+                </div>
+            </div>
+
+            <!-- TAB: OVERVIEW -->
+            <div id="tab-overview" class="tab-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background:var(--primary)"><i class="fas fa-play"></i></div>
+                        <div>
+                            <h3>Total Sessions</h3>
+                            <h2 id="total-sessions">0</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background:var(--secondary)"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h3>Hrs Practice</h3>
+                            <h2 id="total-hours">0</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background:var(--accent)"><i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Active Courses</h3>
+                            <h2 id="active-courses">0</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Popular Courses (Sessions Lead)</h3>
+                    </div>
+                    <div id="course-popularity-chart"
+                        style="height:200px; display:flex; align-items:flex-end; gap:20px; padding:10px 0;">
+                        <!-- Simple CSS Bar Chart -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: LEADERBOARDS (USERS) -->
+            <div id="tab-users" class="tab-content hidden">
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Top 10 Scores per Course</h3>
+                        <select id="leaderboard-course-filter" onchange="adminManager.loadLeaderboard()"
+                            style="padding:5px 10px; border-radius:5px">
+                            <!-- Options filled by JS -->
+                        </select>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Student</th>
+                                <th>Score</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                            <!-- Rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB: QUESTIONS -->
+            <div id="tab-questions" class="tab-content hidden">
+                <div class="dashboard-section">
+                    <h3>Course Question Banks</h3>
+                    <p>Select a course to view/edit questions</p>
+                    <div id="q-courses-list" class="stats-grid" style="margin-top:20px">
+                        <!-- Clickable courses -->
+                    </div>
+
+                    <div id="q-list-container" class="hidden mt-2">
+                        <button class="btn btn-outline mb-1" onclick="adminManager.resetQView()">Back to
+                            Courses</button>
+                        <table class="mt-1">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Question Text</th>
+                                    <th>Difficulty</th>
+                                </tr>
+                            </thead>
+                            <tbody id="questions-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: FEEDBACK -->
+            <div id="tab-feedback" class="tab-content hidden">
+                <div class="dashboard-section">
+                    <h3>Student Feedback</h3>
+                    <div id="feedback-list">
+                        <!-- Feedback items -->
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="data/courses.js"></script>
+    <script src="data/question_csc101.js"></script>
+    <script src="data/question_mth101.js"></script>
+    <script src="data/question_stt201.js"></script>
+    <script src="script.js"></script>
+    <script src="admin-manager.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLDWANDE CBT TEST - University CBT Practice Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>COLDWANDE CBT TEST</h1>
+                    <p>University CBT Practice</p>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="#courses" class="nav-link">
+                    <i class="fas fa-book"></i> Courses
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#" class="btn-login" onclick="alert('Student login is handled via practice session start.')">
+                    <i class="fas fa-sign-in-alt"></i> Student Login
+                </a>
+                <button class="btn-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Practice Makes Perfect!</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Master Your <span class="highlight">University Exams</span> with CBT Practice
+                </h1>
+
+                <p class="hero-description">
+                    Prepare for Computer-Based Tests with realistic exam simulations for all your courses.
+                    Practice with thousands of questions, track your progress, and boost your grades!
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn-primary">
+                        <i class="fas fa-play-circle"></i> Start Practicing Now
+                    </a>
+                    <a href="#how-it-works" class="btn-secondary">
+                        <i class="fas fa-video"></i> Watch Demo
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Practice Questions</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p>University Courses</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>Student Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="floating-cards">
+                    <div class="card card-1">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>CSC101</h4>
+                        <p>Computer Science</p>
+                    </div>
+                    <div class="card card-2">
+                        <i class="fas fa-calculator"></i>
+                        <h4>MTH101</h4>
+                        <p>Mathematics</p>
+                    </div>
+                    <div class="card card-3">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>STT121</h4>
+                        <p>Statistics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wave-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    How It Works
+                </h2>
+                <p class="section-subtitle">
+                    Three simple steps to ace your university CBT exams
+                </p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="step-title">Choose Your Course</h3>
+                    <p class="step-description">
+                        Select from our wide range of university courses and specific topics you want to practice.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="step-title">Take Practice Exams</h3>
+                    <p class="step-description">
+                        Experience realistic CBT simulations with timed exams and instant feedback.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="step-title">Track Your Progress</h3>
+                    <p class="step-description">
+                        Monitor your improvement with detailed analytics and performance reports.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section" id="courses">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-book-open"></i>
+                    Available Courses
+                </h2>
+                <p class="section-subtitle">
+                    Select a course to start practicing. All questions are based on actual university CBT exams.
+                </p>
+            </div>
+
+            <!-- Course Filter -->
+            <div class="course-filter">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="100">100 Level</button>
+                <button class="filter-btn" data-filter="200">200 Level</button>
+                <button class="filter-btn" data-filter="300">300 Level</button>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="courses-grid">
+                <!-- Computer Science Courses -->
+                <div class="course-card" data-level="100" data-department="csc">
+                    <div class="course-header csc-bg">
+                        <div class="course-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="course-code">CSC101</div>
+                    </div>
+                    <div class="course-body">
+                        <h3 class="course-title">Introduction to Computer Science</h3>
+                        <p class="course-description">
+                            Basic programming concepts, algorithms, and problem-solving techniques.
+                        </p>
+                        <div class="course-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-question-circle"></i>
+                                50 Questions
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                45 mins
+                            </span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="student.html?course=csc101" class="btn-start">
+                            <i class="fas fa-play"></i> Start Practice
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mathematics Courses -->
+                <div class="course-card" data-level="100" data-department="mth">
+                    <div class="course-header mth-bg">
+                        <div class="course-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="course-code">MTH101</div>
+                    </div>
+                    <div class="course-body">
+                        <h3 class="course-title">Elementary Mathematics</h3>
+                        <p class="course-description">
+                            Algebra, trigonometry, and basic calculus fundamentals.
+                        </p>
+                        <div class="course-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-question-circle"></i>
+                                60 Questions
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                60 mins
+                            </span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="student.html?course=mth101" class="btn-start">
+                            <i class="fas fa-play"></i> Start Practice
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Statistics Courses -->
+                <div class="course-card" data-level="100" data-department="stt">
+                    <div class="course-header stt-bg">
+                        <div class="course-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="course-code">STT121</div>
+                    </div>
+                    <div class="course-body">
+                        <h3 class="course-title">Introduction to Statistics</h3>
+                        <p class="course-description">
+                            Basic statistical concepts, data presentation, and probability.
+                        </p>
+                        <div class="course-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-question-circle"></i>
+                                40 Questions
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                50 mins
+                            </span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="student.html?course=stt121" class="btn-start">
+                            <i class="fas fa-play"></i> Start Practice
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Computer Engineering -->
+                <div class="course-card" data-level="200" data-department="cpe">
+                    <div class="course-header cpe-bg">
+                        <div class="course-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="course-code">CPE201</div>
+                    </div>
+                    <div class="course-body">
+                        <h3 class="course-title">Computer Engineering</h3>
+                        <p class="course-description">
+                            Digital logic, computer architecture, and hardware fundamentals.
+                        </p>
+                        <div class="course-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-question-circle"></i>
+                                45 Questions
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                70 mins
+                            </span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="student.html?course=cpe201" class="btn-start">
+                            <i class="fas fa-play"></i> Start Practice
+                        </a>
+                    </div>
+                </div>
+
+                <!-- More Courses -->
+                <div class="course-card" data-level="100" data-department="stt">
+                    <div class="course-header stt-bg">
+                        <div class="course-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="course-code">STT111</div>
+                    </div>
+                    <div class="course-body">
+                        <h3 class="course-title">Basic Statistics</h3>
+                        <p class="course-description">
+                            Descriptive statistics, data analysis, and interpretation.
+                        </p>
+                        <div class="course-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-question-circle"></i>
+                                40 Questions
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                45 mins
+                            </span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="student.html?course=stt111" class="btn-start">
+                            <i class="fas fa-play"></i> Start Practice
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card" data-level="100" data-department="mth">
+                    <div class="course-header mth-bg">
+                        <div class="course-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <div class="course-code">MTH103</div>
+                    </div>
+                    <div class="course-body">
+                        <h3 class="course-title">Calculus I</h3>
+                        <p class="course-description">
+                            Limits, derivatives, and applications of differential calculus.
+                        </p>
+                        <div class="course-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-question-circle"></i>
+                                55 Questions
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                75 mins
+                            </span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="student.html?course=mth103" class="btn-start">
+                            <i class="fas fa-play"></i> Start Practice
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card" data-level="200" data-department="stt">
+                    <div class="course-header stt-bg">
+                        <div class="course-icon">
+                            <i class="fas fa-dice"></i>
+                        </div>
+                        <div class="course-code">STT201</div>
+                    </div>
+                    <div class="course-body">
+                        <h3 class="course-title">Probability Theory</h3>
+                        <p class="course-description">
+                            Advanced probability concepts and statistical distributions.
+                        </p>
+                        <div class="course-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-question-circle"></i>
+                                200 Questions
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                60 mins
+                            </span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="student.html?course=stt201" class="btn-start">
+                            <i class="fas fa-play"></i> Start Practice
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card" data-level="200" data-department="mth">
+                    <div class="course-header mth-bg">
+                        <div class="course-icon">
+                            <i class="fas fa-integral"></i>
+                        </div>
+                        <div class="course-code">MTH201</div>
+                    </div>
+                    <div class="course-body">
+                        <h3 class="course-title">Calculus II</h3>
+                        <p class="course-description">
+                            Integration techniques and applications of integral calculus.
+                        </p>
+                        <div class="course-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-question-circle"></i>
+                                50 Questions
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                70 mins
+                            </span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="student.html?course=mth201" class="btn-start">
+                            <i class="fas fa-play"></i> Start Practice
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- View All Button -->
+            <div class="view-all-container">
+                <a href="#" class="btn-view-all">
+                    <i class="fas fa-arrow-right"></i>
+                    View All Courses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-comments"></i>
+                    What Students Say
+                </h2>
+                <p class="section-subtitle">
+                    Join thousands of students who improved their grades with our practice platform
+                </p>
+            </div>
+
+            <div class="testimonial-marquee">
+                <!-- Track 1 (Original Set + New Items) -->
+                <div class="testimonial-track">
+                    <!-- item 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "This platform helped me score an A in STT121! The practice questions were exactly like
+                                the
+                                actual CBT."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Chinonso Okeke</h4>
+                                <p>Computer Science, 200 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "The MTH101 practice exams prepared me perfectly. I finished my actual exam with 30
+                                minutes
+                                to spare!"
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Amina Bello</h4>
+                                <p>Mathematics, 100 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "CPE201 was my toughest course, but practicing here made all the difference. Highly
+                                recommended!"
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>David Johnson</h4>
+                                <p>Computer Engineering, 200 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 4 (New) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "I love the study mode! It explains the answers clearly so I actually learn while
+                                practicing."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Konga</h4>
+                                <p>Economics, 100 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 5 (New) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "The interface is so clean and easy to use on my phone. I practice on my way to
+                                lectures."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Ibrahim Musa</h4>
+                                <p>Physics, 100 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 6 (New) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "Finally a platform that covers 200 level engineering courses properly. Great job guys!"
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Grace Etim</h4>
+                                <p>Engineering, 200 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 2 (Duplicate for Seamless Loop) -->
+                <div class="testimonial-track" aria-hidden="true">
+                    <!-- item 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "This platform helped me score an A in STT121! The practice questions were exactly like
+                                the
+                                actual CBT."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Chinonso Okeke</h4>
+                                <p>Computer Science, 200 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "The MTH101 practice exams prepared me perfectly. I finished my actual exam with 30
+                                minutes
+                                to spare!"
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Amina Bello</h4>
+                                <p>Mathematics, 100 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "CPE201 was my toughest course, but practicing here made all the difference. Highly
+                                recommended!"
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>David Johnson</h4>
+                                <p>Computer Engineering, 200 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 4 (New) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "I love the study mode! It explains the answers clearly so I actually learn while
+                                practicing."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Konga</h4>
+                                <p>Economics, 100 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 5 (New) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "The interface is so clean and easy to use on my phone. I practice on my way to
+                                lectures."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Ibrahim Musa</h4>
+                                <p>Physics, 100 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 6 (New) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "Finally a platform that covers 200 level engineering courses properly. Great job guys!"
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Grace Etim</h4>
+                                <p>Engineering, 200 Level</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Ace Your Exams?</h2>
+                <p class="cta-description">
+                    Join thousands of successful students and start practicing today. It's free!
+                </p>
+                <a href="#courses" class="btn-cta">
+                    <i class="fas fa-rocket"></i>
+                    Start Practicing Now
+                </a>
+            </div>
+            <div class="cta-image">
+                <div class="cta-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h2>COLDWANDE CBT TEST</h2>
+                        <p>University CBT Practice Platform</p>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h3>Quick Links</h3>
+                        <a href="#home">Home</a>
+                        <a href="#courses">Courses</a>
+                        <a href="#about">About Us</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+
+                    <div class="link-group">
+                        <h3>Courses</h3>
+                        <a href="courses/csc101/exam.html">CSC101</a>
+                        <a href="courses/mth101/exam.html">MTH101</a>
+                        <a href="courses/stt121/exam.html">STT121</a>
+                        <a href="courses/cpe201/exam.html">CPE201</a>
+                    </div>
+
+                    <div class="link-group">
+                        <h3>Resources</h3>
+                        <a href="#">Study Tips</a>
+                        <a href="#">Exam Schedule</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Support</a>
+                    </div>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 COLDWANDE CBT TEST - University CBT Practice Platform. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart" style="color: #FF6584;"></i> for students</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <!-- Load course and question data files first -->
+    <script src="data/courses.js"></script>
+    <script src="data/question_csc101.js"></script>
+    <script src="data/question_csc201.js"></script>
+    <script src="data/question_mth101.js"></script>
+    <script src="data/question_stt201.js"></script>
+
+    <!-- Load main script -->
+    <script src="script.js"></script>
+    <script>
+        // Simple course filter and nav logic
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const courseCards = document.querySelectorAll('.course-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // Filter courses
+                    courseCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const cardLevel = card.getAttribute('data-level');
+                            if (cardLevel === filterValue) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const menuBtn = document.querySelector('.btn-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

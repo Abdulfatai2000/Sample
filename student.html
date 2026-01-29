@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Session | COLDWANDE CBT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="student-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="container" style="padding: 20px 0; display:flex; justify-content:space-between; align-items:center">
+        <h3 id="course-title">Loading...</h3>
+        <button onclick="studentManager.quitExam()" class="btn btn-outline"
+            style="padding:8px 20px; font-size:0.9rem">Quit</button>
+    </nav>
+
+    <main class="container exam-layout">
+
+        <aside class="exam-sidebar">
+            <div style="flex-grow:1">
+                <h4>Questions Map</h4>
+                <div id="palette" class="palette-grid">
+                    <!-- Palette items -->
+                </div>
+            </div>
+
+            <div class="mt-2">
+                <div style="display:flex; gap:10px; font-size:0.8rem; margin-top:5px; align-items:center">
+                    <div style="width:12px; height:12px; background:var(--primary); border-radius:3px"></div> Answered
+                </div>
+                <div style="display:flex; gap:10px; font-size:0.8rem; margin-top:5px; align-items:center">
+                    <div style="width:12px; height:12px; background:var(--warning); border-radius:3px"></div> Flagged
+                </div>
+                <div style="display:flex; gap:10px; font-size:0.8rem; margin-top:5px; align-items:center">
+                    <div style="width:12px; height:12px; background:var(--grey); border-radius:3px"></div> Not Visited
+                </div>
+            </div>
+
+            <!-- Submit Button moved to main area -->
+        </aside>
+
+        <div style="flex:1">
+            <section class="question-area">
+                <div id="question-container">
+                    <!-- Dynamic Question Content -->
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Setup Modal (Visible on load) -->
+    <div id="setup-modal" class="modal-overlay"> <!-- Init visible -->
+        <div class="result-card">
+            <h2>Exam Setup</h2>
+            <p>Customize your practice session</p>
+
+            <div class="setup-form" style="text-align:left; margin:20px 0;">
+                <div class="form-group" style="margin-bottom:15px;">
+                    <label style="font-weight:600; display:block; margin-bottom:5px">Select Activity</label>
+                    <div class="mode-toggle" style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px;">
+                        <button class="btn btn-outline" id="btn-mode-exam"
+                            style="background:var(--primary); color:white; border-color:var(--primary); padding:8px 5px; font-size:0.9rem"
+                            onclick="studentManager.setMode('exam')">Exam</button>
+                        <button class="btn btn-outline" id="btn-mode-practice" style="padding:8px 5px; font-size:0.9rem"
+                            onclick="studentManager.setMode('practice')">Practice</button>
+                        <button class="btn btn-outline" id="btn-mode-study" style="padding:8px 5px; font-size:0.9rem"
+                            onclick="studentManager.setMode('study')">Study</button>
+                    </div>
+                    <small id="mode-desc" style="display:block; margin-top:5px; color:#666; min-height:20px">Simulate a
+                        real exam. Timed, results at end.</small>
+                </div>
+
+                <div class="form-group" id="group-count" style="margin-bottom:15px;">
+                    <label style="font-weight:600; display:block; margin-bottom:5px">Number of Questions (Max: <span
+                            id="max-q">--</span>)</label>
+                    <input type="number" id="setup-count" class="form-control" value="20" min="5"
+                        style="width:100%; padding:10px; border-radius:5px; border:1px solid #ddd;">
+                </div>
+
+                <div class="form-group" id="group-time" style="margin-bottom:15px;">
+                    <label style="font-weight:600; display:block; margin-bottom:5px">Time Limit (Minutes)</label>
+                    <input type="number" id="setup-time" class="form-control" value="20" min="1"
+                        style="width:100%; padding:10px; border-radius:5px; border:1px solid #ddd;">
+                </div>
+            </div>
+
+            <button class="btn btn-primary" style="width:100%; padding:12px; font-size:1.1rem"
+                onclick="studentManager.startSession()">Start Practice</button>
+        </div>
+    </div>
+
+    <!-- Result Modal (Hidden by default) -->
+    <div id="result-modal" class="modal-overlay hidden">
+        <div class="result-card">
+            <h2>Session Complete!</h2>
+            <div class="score-circle" id="result-chart">
+                <span class="score-text" id="final-score">0%</span>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <div class="stat-val" id="total-answered">0</div>
+                    <div class="stat-label">Answered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="total-time">00:00</div>
+                    <div class="stat-label">Time Taken</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="accuracy-rating">0%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+            </div>
+
+            <div class="feedback-box">
+                <h4>Feedback</h4>
+                <textarea id="feedback-text" placeholder="Found an issue? Let us know..."></textarea>
+                <div style="display:flex; gap:10px; justify-content:center; margin-top:10px; flex-wrap:wrap">
+                    <button class="btn btn-outline" onclick="studentManager.restartSession()">
+                        <i class="fas fa-redo"></i> Restart Quiz
+                    </button>
+                    <button class="btn btn-primary" onclick="studentManager.viewCorrections()">
+                        <i class="fas fa-eye"></i> View Corrections
+                    </button>
+                    <button class="btn btn-outline" onclick="window.location.href='index.html'">Return Home</button>
+                    <button class="btn btn-outline" onclick="studentManager.saveFeedback()">Save Feedback</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/courses.js"></script>
+    <script src="data/question_csc101.js"></script>
+    <script src="data/question_csc201.js"></script>
+    <script src="data/question_mth101.js"></script>
+    <script src="data/question_stt201.js"></script>
+    <script src="script.js"></script>
+    <script src="student-manager.js"></script>
+</body>
+
+</html>
